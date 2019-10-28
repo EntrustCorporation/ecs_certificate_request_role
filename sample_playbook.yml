@@ -1,5 +1,5 @@
 ---
 
 - hosts: localhost
-  roles:
-    - galaxy-edc-roles
+  tasks:
+    - include: request_certificate.yml
