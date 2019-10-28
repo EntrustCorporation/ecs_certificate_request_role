@@ -1,0 +1,43 @@
+---
+# vars file for galaxy-edc-roles
+
+working_path: /var/galaxy-edc-role/test
+
+# Values used for private key generation
+privatekey_path: '{{ working_path }}/files/prvkey.pem'
+
+# Values used for the CSR generation
+csr_path: '{{ working_path }}/files/csr.pem'
+cert_common_name: ansible.com
+cert_organization_name: Your Organization
+cert_organizational_unit_name: OrgUnit
+cert_country_name: US
+cert_state_or_province_name: MA
+
+# Values used when requesting the certificate from ECS API
+cert_path: '{{ working_path }}/files/cert.pem'
+cert_type: UC_SSL
+
+#Request a renew if certificate in cert_path exists and has 30 days remaining
+request_type: RENEW
+days_remaining: 30
+
+# Values used for requests to the API that are independent of specific cert being requested
+requester_name: Bob Lee
+requester_email: boblee@ansible.com
+requester_phone: 888-888-888
+
+# Username/password from when generating API credentials
+entrust_api_user: API-username  
+entrust_api_key: API-password
+
+# PEM encoded certificate and key information
+# Remember to replace the contents of these files with your actual client keypair,
+# or change this path to point to another location where they can be found.
+entrust_api_client_cert_path: '{{ working_path }}/files/apiClientCert.pem'
+entrust_api_client_cert_key_path: '{{ working_path }}/files/apiClientKey.pem'
+
+# A path to a local copy of the API specification. If this value is not specified,
+# the spec will be downloaded dynamically, but it speeds things up if you store a
+# local copy, and reduces your network bandwidth costs.
+entrust_api_specification_path: '{{ working_path }}/files/cms-api-2.1.0.yaml'
