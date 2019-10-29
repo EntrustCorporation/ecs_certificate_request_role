@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: entrust_certificate_request
+  role_name: ecs_certificate_request
   author: Taha Hadreez
   description: Entrust Certificate Services (ECS) API Integration - Request an SSL certificate from the ECS API.
   company: Entrust Datacard
