@@ -1,4 +1,4 @@
-galaxy-edc-roles
+ecs_certificate_request_role
 =====================
 
 Additional references
