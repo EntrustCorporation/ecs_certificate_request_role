@@ -39,8 +39,8 @@ The command below is an example of how to use the role.
 
 Before running the example you will need to: 
 
-	1- Update the contents of api-files with your ECS API certificate and key information.
-	2- Update or override the variables in defaults/ as appropriate for the certificate you wish to request and the location you want it.
+	1- Update the contents of ./files with your ECS API certificate and key information.
+	2- Update or override the variables in ./defaults/ as appropriate for the certificate you wish to request and the location you want it.
 
 Navigate to the top level of this role: 
 	   
