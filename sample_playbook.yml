@@ -1,5 +1,5 @@
 ---
 
 - hosts: localhost
-  tasks:
-    - include: main.yml
+  roles:
+    - entrust_datacard.ecs_certificate_request
