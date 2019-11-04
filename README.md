@@ -39,11 +39,15 @@ The command below is an example of how to use the role.
 
 Before running the example you will need to: 
 
-	1- Update the contents of ./files with your ECS API certificate and key information.
-	2- Update or override the variables in ./defaults/ as appropriate for the certificate you wish to request and the location you want it.
-
-Navigate to the top level of this role: 
-	   
+	1- Update the contents of ./files with the ECS API client certificate and privatekey.
+	2- Update or override the variables in ./defaults/ as appropriate for the CSR information and the certificate
+	   location you want it.
+	   	cert_common_name: Your Domain
+		cert_organization_name: Your Organization
+		cert_organizational_unit_name: OrgUnit
+		cert_country_name: US
+		cert_state_or_province_name: MA
+			   
 Run command "ansible-playbook sample_playbook.yml"
 
 Additional references
