@@ -37,16 +37,33 @@ Example Playbook
 
 The command below is an example of how to use the role.
 
-Before running the example you will need to: 
+Before running the example you will need to to update the below: 
+	
+Mandatory Parameters:
+	working_path # Path that the key pair, certificate signing request, and certificate will be stored in, unless otherwise 		specified (see optional parameters)
+	cert_common_name
+	cert_organization_name:
+	cert_organizational_unit_name:
+	cert_country_name:
+	cert_state_or_province_name:
+	cert_type
+	requester_name
+	requester_email
+	requester_phone
 
-	1- Update the contents of ./files with the ECS API client certificate and privatekey.
-	2- Update or override the variables in ./defaults/ as appropriate for the CSR information and the certificate
-	   location you want it.
-	   	cert_common_name: Your Domain
-		cert_organization_name: Your Organization
-		cert_organizational_unit_name: OrgUnit
-		cert_country_name: US
-		cert_state_or_province_name: MA
+Mandatory authentication parameters
+	entrust_api_user
+	entrust_api_key
+	entrust_api_client_cert_path
+	entrust_api_client_cert_key_path
+
+Optional parameters:
+	cert_path # Full path to the location that will be used to save the generated certificate.
+	csr_path: # Full path to the location that will be used to save the certificate signing request
+	privatekey_path: # Full path to the location that will be used to save the private key.
+	request_type
+	days_remaining
+	entrust_api_specification_path
 			   
 Run command "ansible-playbook sample_playbook.yml"
 
@@ -65,5 +82,5 @@ MIT/BSD
 Author Information
 ------------------
 
-This role was created by Taha Hadreez (ECS testing)
+This role was created by Taha Hadreez
 Copyright (c), Entrust Datacard Corporation, 2019
