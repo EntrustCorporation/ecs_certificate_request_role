@@ -3,7 +3,7 @@ ecs_certificate_request_role
 
 Purpose of role
 ---------------
-This role creates a publicly-signed Entrust Datacard certificate.
+This role creates a publicly-signed Entrust certificate.
 
  - Create a private key.
  - Create a certificate signing request (CSR).
@@ -70,9 +70,9 @@ Run command "ansible-playbook sample_playbook.yml"
 Additional references
 ---------------------
 - Leveraging Deployment Automation Ansible Role to Set Up and Refresh Your Web Infrastructure (article)
-https://www.entrustdatacard.com/blog/2019/august/leveraging-deployment-automation-tools 
-- Entrust Datacard SSL certificates information/purchase pages
-https://www.entrustdatacard.com/products/categories/ssl-certificates
+https://blog.entrust.com/2019/08/leveraging-deployment-automation-tools/ 
+- Entrust SSL certificates information/purchase pages
+https://www.entrust.com/digital-security/certificate-solutions/products/digital-certificates/tls-ssl-certificates
 		
 License
 -------
@@ -81,6 +81,5 @@ MIT/BSD
 
 Author Information
 ------------------
-
 This role was created by Taha Hadreez
-Copyright (c), Entrust Datacard Corporation, 2020
+Copyright (c), Entrust Corporation, 2021
