@@ -1,6 +1,10 @@
 ---
 # tasks file for galaxy-edc-roles
 
+- name: Include vars of Certificate request from 'defaults/main.yml'.
+  include_vars:
+    file: defaults/main.yml
+
 - name: Verify that the directory we want to use exists on the server.
   file:
     path: '{{ working_path }}'
